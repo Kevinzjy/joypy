@@ -435,7 +435,7 @@ def _joyplot(data,
     fig, axes = _subplots(naxes=num_axes, ax=ax, squeeze=False,
                           sharex=True, sharey=False, figsize=figsize,
                           layout_type='vertical')
-    _axes = _flatten(axes)
+    _axes = list(_flatten(axes))
 
     # The legend must be drawn in the last axis if we want it at the bottom.
     if loc in (3, 4, 8) or 'lower' in str(loc):
